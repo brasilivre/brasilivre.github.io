@@ -1,0 +1,659 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8"> 
+<style>
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+</style>
+
+
+<script>
+var aut = 0
+var lib = 0
+var cons = 0
+var prog = 0
+var option = 0
+var lock = false
+function result() {
+	var x = ''
+	if ( aut > lib && cons > prog && option == 1) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Pró-Mercado ( ex. Pinochet )"
+	}
+	if ( aut > lib && cons > prog && option == 2) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Pró-Mercado ( ex. Pinochet )"
+	}
+	if ( aut > lib && cons > prog && option == 3) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Pró-Mercado ( ex. Pinochet )"	
+	}
+	if ( aut > lib && cons > prog && option == 4) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Estatista ( ex. Fascismo, Nazismo, Integralismo, Estado Novo )"	
+	}
+	if ( aut > lib && cons > prog && option == 5) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Clientelista ( ex. ditaduras africanas, Mugabe, teocracias islâmicas)"	
+	}
+	if( aut > lib && cons > prog && option == 6) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Conservador Comunista ( ditaduras comunistas )"
+	}
+	if ( aut > lib && prog > cons && option == 1) {	
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Pró-Mercado ( ex. Fulgêncio Batista, ditaduras caribenhas, ditaduras em resorts ou paraísos fiscais)"
+	}
+	if ( aut > lib && prog > cons && option == 2) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Pró-Mercado ( ex. Fulgêncio Batista, ditaduras caribenhas, ditaduras em resorts ou paraísos fiscais)"
+	}
+	if ( aut > lib && prog > cons && option == 3) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Pró-Mercado ( ex. Fulgêncio Batista, ditaduras caribenhas, ditaduras em resorts ou paraísos fiscais)"
+	}
+	if ( aut > lib && prog > cons && option == 4) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Estatista ( ex. Bolivarianismo inicial, Regime militar tailandês, regime militar brasileiro )"
+	
+	}
+	if ( aut > lib && prog > cons && option == 6) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Comunista ( ex. Venezuela chavista atual )"
+	}
+	if ( aut > lib && prog > cons && option == 5) {
+		x = document.getElementById('fname')
+		x.textContent = "Autoritarismo Hedonista Clientelista ( ex. regime militar brasileiro, Estado Novo, Bielorrússia, ditaduras do Leste Europeu)"	
+	}
+	if ( lib > aut && cons > prog && option == 1) {	
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Conservador Pró-Mercado ( ex. Tea Party, partidos conservadores europeus)"
+	}
+	if ( lib > aut && cons > prog && ( option == 2 || option === 3 ) ) {	
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Conservador Pró-Mercado ( ex. Partido Republicano, partidos conservadores europeus, Margareth Thatcher )"
+	}
+	if ( lib > aut && cons > prog && option == 4) {
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Conservador Estatista (ex. Bolsonaro, partidos democrata-cristãos"
+	}
+	if ( lib > aut && cons > prog && option == 5) {	
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Conservador Clientelista ( ex. Filipinas, Indonésia )"
+	}
+	if ( lib > aut && cons > prog && option == 6) {
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Conservador Comunista (sovietes, cristãos primitivos)"
+	}
+	if ( lib > aut && prog > cons && option == 1) {
+		x = document.getElementById('fname')
+		x.textContent = "Libertário Anarquista ou Anarcocapitalista."
+	}
+	if ( lib > aut && prog > cons && option == 2) {
+		x = document.getElementById('fname')
+		x.textContent = "Direita Liberal, Neoliberal."
+	}
+	if ( lib > aut && prog > cons && option == 3) {
+		x = document.getElementById('fname')
+		x.textContent = "Direita Neoliberal."
+	}
+	if ( lib > aut && prog > cons && option == 4) {
+		x = document.getElementById('fname')
+		x.textContent = "Social-Democrata, Liberal Social (ex. social democracias européias, Partido Democrata)"
+	}
+	if ( lib > aut && prog > cons && option == 5) {
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Progressista Clientelista (ex. Brasil, México, África do Sul)"
+	}
+	if ( lib > aut && prog > cons && option == 6) {
+		x = document.getElementById('fname')
+		x.textContent = "Liberalismo Progressista Comunista (ex. comunidades hippies )"
+	}
+}
+function autoritarismo(item) {
+	aut = aut + 1
+	result()
+}
+function libertarianismo(item) {
+	lib = lib + 1
+	result()
+}
+function conservadorismo(item) {
+	cons = cons + 1
+	result()
+}
+function progressismo(item) {
+	prog = prog + 1
+	result()
+}
+function opt(item) {
+	if ( lock == false ) {
+		option = item
+		lock = true
+		result()
+	}
+}
+</script>
+<body>
+
+<div class="topnav">
+  <a href="https://old.reddit.com/r/brasilivre">Visite o /r/brasilivre (old.reddit)</a>
+  <a href="https://www.reddit.com/r/brasilivre">Visite o /r/brasilivre ( reddit ) </a>
+  <a href="https://www.ceddit.com/r/brasilivre">Visite o /r/brasilivre ( ceddit )</a>
+</div>
+
+<div class="content">
+  
+
+<form class="form-style-4" action="" method="post">
+<h1> Questionário Político-Comportamental do /r/brasilivre</h1><br>
+<h2>EIXO POLÍTICO</h2> <br>
+
+1- Um governo forte e que concentre muitos poderes é necessário para criar ordem e fazer as mudanças que o país necessita.</b> <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+2- Mandatos mais duráveis e a possibilidade de mais reeleições, ou de reeleições indefinidas, é necessário para que haja uma continuidade administrativa e que políticas de longo prazo sejam melhor implementadas e conduzidas. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+3 - Um sistema de governo deve ser aberto à maior participação possível dos governados, através de consultas frequentes, assembléias, plebiscitos, referendos, recalls ou de uma democracia direta. <br>
+
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+4- O governo, os cargos políticos e a representação parlamentar devem estar abertos a todos, independente de sua ideologia, classe, opinião, grupo, filiação político-partidária ou preferências declaradas. <br>
+
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+5- Deve haver liberdade de expressão plena, sem nenhum tipo de censura  promovida pelo Estado. <br>
+
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+6- Deve haver liberdade de associação plena para fins pacíficos, sem nenhum tipo de impedimento ou repressão promovida pelo Estado. <br>
+
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+7- O regime militar brasileiro foi positivo em sua maior parte, e eu o apoiaria. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+8- O regime venezuelano de Chávez e Maduro é positivo em sua maior parte, e eu o apóio. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+9- O regime de Pinochet, no Chile,  foi positivo em sua maior parte, e eu o apoiaria. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+10- O regime socialista cubano fundado por Fidel Castro é positivo em sua maior parte, e eu o apóio. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+11- O regime fascista no modelo de Mussolini é positivo em sua maior parte, e eu o apoiaria. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+12- O regime socialista no modelo soviético é positivo em sua maior parte, e eu o apoiaria. <br>
+
+<input type="radio" onclick="if(this.checked){autoritarismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){autoritarismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){libertarianismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+<h2>EIXO COMPORTAMENTAL</h2> <br>
+
+1- As tradições de uma sociedade são o produto de séculos ou milênios de experiência, e por isso devem ser respeitadas e preservadas. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+2- O estado deve intervir para apoiar, fomentar e preservar valores tradicionais, como família, honra, religião e moral. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+3- A religião e seus valores são necessários para a criação e manutenção de uma sociedade saudável, cimentando-a com boas bússolas morais. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+4- Se Deus não existe, tudo é permitido. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+5- O casamento entre homem e mulher é uma instituição milenar sagrada e valiosa, necessária para a constituição de uma família saudável. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+6- Relações homoafetivas são anti-naturais e imorais, prejudiciais à família, à sociedade, à  humanidade e à religião. Por isso devem ser desincentivadas ou mesmo combatidas. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+7- O que pessoas adultas fazem por livre e espontânea vontade, sem prejudicar terceiros, não é da conta do estado nem de ninguém. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+8- A função primária da mulher deve ser cuidar da família, dos filhos e da casa. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+9- Mulheres devem ser honradas e só fazerem sexo com seus maridos após o casamento. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+10- Adultério deve ser crime punível pelo estado. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+11- O aborto deve ser proibido e combatido, exceto em raras circunstâncias (risco de morte à mulher). <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+12- Não existem papéis de gênero para homem e mulher, cada pessoa deve ser livre pra fazer o que bem entender de sua vida. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+13- Gênero é uma construção social. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+14- O estado deve, de forma ativa, combater preconceitos difusos e subreptícios contra minorias. <br> 
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+15- O estado pode e deve fazer discriminação positiva em favor de grupos historicamente desfavorecidos. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+16- O ensino infantil deve ser livre de conteúdo relacionado a ideologias de gênero e orientação sexual. É papel dos pais orientarem seus filhos como julgarem correto. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+17- O ensino infantil deve ter incluso conteúdo que combata o preconceito contra minorias sexuais e questione ou negue a heteronormatividade. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+18- A educação moral das crianças é papel primordial e inalienável dos pais. O estado não pode doutriná-las com nenhuma ideologia política, moral ou comportamental. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+19- A autoridade dos pais sobre a educação dos próprios filhos não é absoluta. O estado pode interferir na educação e formação delas, mesmo contra a vontade dos pais. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+20- O uso de drogas é prejudicial ao indivíduo e à sociedade, devendo ser reprimido. <br>
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+21- O uso de drogas é um problema individual, um crime sem vítima, por isso deve ser totalmente livre de sanções. <br>
+
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+22-A produção e o comércio de drogas deve ser proibido e combatido. <br>
+
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+23- A insanidade dos SJW foi longe demais. O politicamente correto é uma praga pretensiosa e totalitária. <br>
+
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+24- O feminismo é um movimento necessário, atual e positivo. <br> 
+
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+25- Casais homossexuais devem ter o mesmo direito e o mesmo nível de preferência para adotar crianças que um casal heterossexual. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+26- O estado deve forçar o tratamento rigorosamente igual para homossexuais e heterossexuais em todos os setores da sociedade, inclusive nos templos e cerimônias religiosas. <br>
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+27- Religião é veneno, trás mais malefícios do que benefícios à humanidade. <br>
+
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+28- Criminosos devem ser tratados com o máximo rigor. Pena de morte, prisão perpétua e trabalhos forçados devem fazer parte do rol de penas aplicáveis. <br>
+
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+
+29- A posse e o porte de armas é um direito inalienável do cidadão. <br>
+
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+30- Criticar a homossexualidade deve considerado crime. <br>
+
+
+
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+31- A imigração deve ser desincentivada e o tratamento a imigrantes ilegais deve ser duro. <br>
+
+
+<input type="radio" onclick="if(this.checked){conservadorismo(2)}"> Concordo plenamente <br>
+<input type="radio" onclick="if(this.checked){conservadorismo(1)}"> Concordo em partes <br>
+<input type="radio"> Não concordo nem discordo <br>
+<input type="radio" onclick="if(this.checked){progressismo(1)}"> Discordo em partes <br>
+<input type="radio" onclick="if(this.checked){progressismo(2)}"> Discordo plenamente <br>
+
+<hr><br>
+
+<h2>EIXO ECONÔMICO</h2> <br>
+
+Qual das alternativas abaixo é sua preferência em relação ao estado? <br> <br>
+
+<input type="radio" onclick="if(this.checked){opt(1)}">  1- O estado não deve existir. <br>
+<input type="radio" onclick="if(this.checked){opt(2)}"> 2- O estado deve se ater apenas a funções políticas (segurança externa e interna, justiça, incluindo a defesa do consumidor e a garantia dos contratos), deixando todo o restante para o mercado. <br>
+<input type="radio" onclick="if(this.checked){opt(3)}"> 3-  Além das funções de segurança e justiça, o estado também deve regular a economia para aparar algumas arestas (Ex: combatendo cartéis, trustes, fazendo políticas anti-cíclicas, regulando a moeda e o crédito) <br>
+<input type="radio" onclick="if(this.checked){opt(4)}"> 4- Além de cuidar da segurança, justiça e regular alguns aspectos macroeconômicos, o estado também deve ofertar serviços públicos, tais como saúde, educação, previdência, creche, créditos habitacionais, infraestrutura e saneamento. Financiando esses serviços com uma alta carga tributária. <br>
+<input type="radio" onclick="if(this.checked){opt(5)}"> 5- O estado deve intervir na economia para ajudar algumas empresas a crescerem e prosperarem mais, concedendo-lhes empréstimos em condições faciltadas, financiamentos, subsídios, ajuda em momentos de crise, taxando concorrentes externos ou domésticos e garantindo o seu mercado <br>
+<input type="radio" onclick="if(this.checked){opt(6)}"> 6- O estado deve controlar totalmente a economia, proibindo a propriedade privada de qualquer meio de produção ou a criação de qualquer negócio privado. Pode planificar de forma centralizada ou dar maior autonomia às empresas, mas todas elas seriam estatais <br>
+</form>
+<br>
+<h2>Você é classificado como:</h2> <br>
+<br>
+<div id="fname"> ( Por favor, responda mais perguntas para saber o resultado. ) </div> <br>
+<br>
+</div>
+
+<div class="footer">
+  <p></p>
+</div>
+
+</body>
+</html>
